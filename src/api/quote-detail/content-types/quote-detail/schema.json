@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "quote_details",
+  "info": {
+    "singularName": "quote-detail",
+    "pluralName": "quote-details",
+    "displayName": "quoteDetail",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Q_ID": {
+      "type": "string"
+    },
+    "bond_works_master": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::bond-works-master.bond-works-master",
+      "inversedBy": "quote_details"
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bond_works_masters",
+  "info": {
+    "singularName": "bond-works-master",
+    "pluralName": "bond-works-masters",
+    "displayName": "BondWorksMaster",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ISIN": {
+      "type": "string"
+    },
+    "Is_approved": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "admin_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "admin::user"
+    },
+    "quote_details": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::quote-detail.quote-detail",
+      "mappedBy": "bond_works_master"
+    },
+    "BondName": {
+      "type": "string"
+    },
+    "MinInvest": {
+      "type": "string"
+    },
+    "MaxInvest": {
+      "type": "string"
+    },
+    "Yeild": {
+      "type": "string"
+    },
+    "PaymentFrequency": {
+      "type": "string"
+    },
+    "Logo": {
+      "type": "string"
+    },
+    "MaturityDate": {
+      "type": "date"
+    }
+  }
+}

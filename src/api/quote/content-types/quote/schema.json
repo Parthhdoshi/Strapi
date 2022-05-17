@@ -1,0 +1,23 @@
+{
+  "kind": "singleType",
+  "collectionName": "quotes",
+  "info": {
+    "singularName": "quote",
+    "pluralName": "quotes",
+    "displayName": "quote"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "bond_works_masters": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::bond-works-master.bond-works-master"
+    },
+    "Q_ID1": {
+      "type": "string"
+    }
+  }
+}
